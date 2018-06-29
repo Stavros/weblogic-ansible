@@ -1,0 +1,16 @@
+---
+- name: Configure RHEL 7 with WebLogic 12c domain
+  hosts: all
+  become: yes
+  become_user: root
+  vars_files:
+    # User defined variables for infrastructure
+    - infra-vars.yml
+    - wls-vars.yml
+    - secrets.yml
+  roles:
+    - role: linux-wls
+    - role: linux-jdk
+    - role: fmw-software
+    - role: fmw-domain
+    - role: fmw-managed-server
