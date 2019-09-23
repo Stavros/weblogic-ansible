@@ -12,4 +12,3 @@ weblogic_admin: 'weblogic'
 admin_server_name: 'AdminServer'
 #server_hostname: '{{ ansible_fqdn }}'
 server_hostname: 'localhost'
-
